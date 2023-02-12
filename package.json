@@ -1,0 +1,43 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare",
+    "prettier": "prettier --check .",
+    "prettier:fix": "prettier --write .",
+    "eslint": "eslint . --ext .vue,.js,.jsx,.ts,.tsx --cache",
+    "eslint:fix": "npm run eslint -- --fix",
+    "prepare": "husky install"
+  },
+  "lint-staged": {
+    "*.{js,jsx,ts,tsx}": [
+      "eslint --cache --fix",
+      "prettier --write --list-different"
+    ],
+    "*.{json,md,html,css,scss,sass,less,styl}": [
+      "prettier --write --list-different"
+    ]
+  },
+  "devDependencies": {
+    "@nuxtjs/eslint-config": "^12.0.0",
+    "@nuxtjs/eslint-config-typescript": "^12.0.0",
+    "@nuxtjs/tailwindcss": "^6.4.0",
+    "@typescript-eslint/eslint-plugin": "^5.51.0",
+    "@typescript-eslint/parser": "^5.51.0",
+    "@vue/eslint-config-typescript": "^11.0.2",
+    "eslint": "^8.34.0",
+    "eslint-plugin-vue": "^9.9.0",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.1.1",
+    "nuxt": "^3.1.2",
+    "prettier-plugin-tailwindcss": "^0.2.2",
+    "vue-eslint-parser": "^9.1.0"
+  },
+  "dependencies": {
+    "eslint-config-prettier": "^8.6.0",
+    "prettier": "^2.8.4"
+  }
+}
